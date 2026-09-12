@@ -1,0 +1,41 @@
+<div class="container pt-4">
+    <h3>Calcular Distancia entre 2 Puntos</h3>
+    
+    <div class="row mt-4">
+    
+        <div class="col-6">
+            <h4>Punto 1</h4>
+            <div class="mb-3">
+                <label>x1:</label>
+                <input type="text" [(ngModel)]="x1" class="form-control" placeholder="-4">
+            </div>
+            <div class="mb-3">
+                <label>y1:</label>
+                <input type="text" [(ngModel)]="y1" class="form-control" placeholder="-3">
+            </div>
+        </div>
+
+      
+        <div class="col-6">
+            <h4>Punto 2</h4>
+            <div class="mb-3">
+                <label>x2:</label>
+                <input type="text" [(ngModel)]="x2" class="form-control" placeholder="2">
+            </div>
+            <div class="mb-3">
+                <label>y2:</label>
+                <input type="text" [(ngModel)]="y2" class="form-control" placeholder="5">
+            </div>
+        </div>
+    </div>
+    
+  
+    <button (click)="calcularDistancia()" class="btn btn-primary mt-3">
+        Calcular Distancia
+    </button>
+    
+
+    <div class="mt-4">
+        <h2>La distancia es: {{ distancia }}</h2>
+    </div>
+</div>
