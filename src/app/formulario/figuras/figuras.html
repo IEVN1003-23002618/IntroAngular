@@ -1,0 +1,51 @@
+<div>
+  <h2>Calculadora de Áreas</h2>
+
+  <!-- Radio Botones -->
+  <div>
+    <label>
+      <input type="radio" name="figura" value="rectangulo" [(ngModel)]="figura"> Rectángulo
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="figura" value="cuadrado" [(ngModel)]="figura"> Cuadrado
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="figura" value="triangulo" [(ngModel)]="figura"> Triángulo
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="figura" value="pentagono" [(ngModel)]="figura"> Pentágono
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="figura" value="circulo" [(ngModel)]="figura"> Círculo
+    </label>
+  </div>
+
+  <br>
+
+  <!-- Caja de texto 1 -->
+  <div>
+    <label>Valor 1:</label>
+    <input type="number" [(ngModel)]="num1">
+  </div>
+
+  <br>
+
+  <!-- Caja de texto 2 -->
+  <div>
+    <label>Valor 2:</label>
+    <input type="number" [(ngModel)]="num2">
+    <small *ngIf="figura === 'cuadrado' || figura === 'circulo'">
+      
+    </small>
+  </div>
+
+  <br>
+
+  <button (click)="calcular()">Calcular Área</button>
+
+  <h3>Resultado: {{ resultado }}</h3>
+</div>
